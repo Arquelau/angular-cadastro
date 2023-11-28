@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from './material/material.module';
 
 import { ContatoComponent } from './contato/contato.component';
 import { DocumentacaoComponent } from './documentacao/documentacao.component';
@@ -21,7 +22,8 @@ import { CadastroComponent } from './cadastro.component';
     InformacoesPessoaisComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
   ],
   exports: [
     CadastroComponent

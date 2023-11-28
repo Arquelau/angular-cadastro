@@ -1,5 +1,61 @@
 <div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Informações Pessoais</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nome Completo</mat-label>
+          <input matInput placeholder="Insira seu nome completo..." value="">
+        </mat-form-field>
+      </form>
 
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Data de Nascimento</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </form>
+
+      <form class="example-form">
+        <mat-form-field>
+          <mat-label>Gênero</mat-label>
+          <mat-select>
+            <mat-option value="1">Masculino</mat-option>
+            <mat-option value="2">Feminino</mat-option>
+            <mat-option value="3">Outro</mat-option>
+          </mat-select>
+        </mat-form-field>  
+      </form>
+
+      <form class="example-form">
+        <mat-form-field>
+          <mat-label>Estado Civil</mat-label>
+          <mat-select>
+            <mat-option value="1">Solteiro</mat-option>
+            <mat-option value="2">Casado</mat-option>
+            <mat-option value="3">Divorciado</mat-option>
+            <mat-option value="4">Outro</mat-option>
+          </mat-select>
+        </mat-form-field>  
+      </form>
+
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nacionalidade</mat-label>
+          <input matInput placeholder="Insira sua nacionalidade..." value="">
+        </mat-form-field>
+      </form>
+
+    </mat-card-content>
+  </mat-card>
 </div>
 
 
