@@ -1,1 +1,38 @@
-<p>informacoes-de-residencia works!</p>
+<div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Informações de Residência</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+      <form class="form">
+        <div class="Form-group">
+          <mat-form-field class="full-width">
+            <mat-label>CEP</mat-label>
+            <input  matInput class="Form-control" type="text" minlength="8" maxlength="9" [formControl]="cep" (blur)="getCep(cep.value)" placeholder="Insira seu CEP" required>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Logradouro</mat-label>
+            <input  matInput readonly="readonly" class="Form-control" type="text" [formControl]="logradouro">
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Bairro</mat-label>
+            <input  matInput readonly="readonly" class="Form-control" type="text" [formControl]="bairro"  >
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Cidade</mat-label>
+            <input  matInput readonly="readonly" class="Form-control" type="text" [formControl]="cidade" >
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Estado</mat-label>
+            <input  matInput readonly="readonly" class="Form-control" type="text" [formControl]="estado" >
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
