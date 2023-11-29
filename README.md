@@ -1,27 +1,33 @@
 # AngularCadastro
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+## Sobre
+Projeto de teste com objetivo de criar uma página frontend de cadastro usando o framework Angular. Os dados são salvos localmente.
 
-## Development server
+## Tabela de Conteúdo
+=================
+<!--ts-->
+   * [Sobre](#sobre)
+   * [Tabela de Conteúdo](#tabela-de-conteúdo)
+   * [Como usar](#como-usar)
+      * [Início](#início)
+      * [No navegador](#no-navegador)
+   * [Observações](#observações)
+<!--te-->
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Como usar
 
-## Code scaffolding
+### Início
+Ao concluir o download deste repositório, utilize o comando "ng serve" no seu terminal para iniciar o app.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### No navegador
+Em seguida, utilize o endereço "http://localhost:4200/cadastro" no seu navegador para acessar o conteúdo da aplicação.
+Alternativamente, é possível utilizar o seguinte link de acesso "https://master--lustrous-genie-57f969.netlify.app/cadastro" para acessar a versão de produção hospedada no Netlify.
 
-## Build
+## Observações
+Este é um projeto de nível iniciante com o framework Angular. A seguir, uma lista de possíveis melhorias: 
+- A refatoração para dimunuição de código repetido
+- Melhorias na formatação do formulário para restringir a captação de dados
+- Melhorar a organização do projeto
+- O uso de teste de software para aprimorar a verificação de erros
+- Dividir responsabilidade entre as classes.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
