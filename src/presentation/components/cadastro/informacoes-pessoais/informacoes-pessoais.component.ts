@@ -1,11 +1,27 @@
 import { Component, Input, SimpleChanges } from '@angular/core'
 import { FormControl } from '@angular/forms'
 import { InformacoesPessoais } from '../../../../domain/cadastro/informacoes-pessoais'
+import { MAT_DATE_FORMATS } from '@angular/material/core'
+
+export const MY_DATE_FORMATS = {
+  parse: {
+    dateInput: 'DD/MM/YYYY',
+  },
+  display: {
+    dateInput: 'DD/MM/YYYY',
+    monthYearLabel: 'MMMM YYYY',
+    dateA11yLabel: 'LL',
+    monthYearA11yLabel: 'MMMM YYYY'
+  }
+}
 
 @Component({
   selector: 'app-informacoes-pessoais',
   templateUrl: './informacoes-pessoais.component.html',
-  styleUrl: './informacoes-pessoais.component.css'
+  styleUrl: './informacoes-pessoais.component.css',
+  providers: [
+    { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS }
+]
 })
 export class InformacoesPessoaisComponent {
   
