@@ -1,1 +1,34 @@
-<p>emprego-educacao works!</p>
+<div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Emprego e Educação</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Renda</mat-label>
+          <input type="number" [formControl]="renda" matInput placeholder="Insira sua renda..." value="" required>
+        </mat-form-field>
+      </form>
+      
+      <form class="form">
+        <mat-form-field>
+          <mat-label>Histórico de Crédito</mat-label>
+          <mat-select [formControl]="historicoDeCredito" required>
+            <mat-option value="1">Bom</mat-option>
+            <mat-option value="2">Regular</mat-option>
+            <mat-option value="3">Ruim</mat-option>
+          </mat-select>
+        </mat-form-field>  
+      </form>
+
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Conta Bancária</mat-label>
+          <input type="number" [formControl]="contaBancaria" matInput placeholder="Insira sua conta bancária..." value="" required>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
