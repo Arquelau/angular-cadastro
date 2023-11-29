@@ -1,6 +1,25 @@
-<app-informacoes-pessoais></app-informacoes-pessoais>
-<app-contato></app-contato>
-<app-documentacao></app-documentacao>
-<app-informacoes-de-residencia></app-informacoes-de-residencia>
-<app-emprego-educacao></app-emprego-educacao>
-<app-emergencia></app-emergencia>
+<div>
+  <mat-card class="form center">
+    <mat-card-header>
+      <mat-card-title class="center"><h1>Cadastro</h1></mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+      <app-informacoes-pessoais [buttonTrigger]="buttonToggle"></app-informacoes-pessoais>
+      <br>
+      <app-contato [buttonTrigger]="buttonToggle"></app-contato>
+      <br>
+      <app-documentacao [buttonTrigger]="buttonToggle"></app-documentacao>
+      <br>
+      <app-informacoes-de-residencia [buttonTrigger]="buttonToggle"></app-informacoes-de-residencia>
+      <br>
+      <app-emprego-educacao [buttonTrigger]="buttonToggle"></app-emprego-educacao>
+      <br>
+      <app-emergencia [buttonTrigger]="buttonToggle"></app-emergencia>
+      <br>
+      <mat-card-actions align="end">
+        <button mat-button (click)="cadastroSaveClick()">Salvar</button>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</div>

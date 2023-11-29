@@ -9,6 +9,8 @@ import { EmpregoEducacaoComponent } from './emprego-educacao/emprego-educacao.co
 import { InformacoesDeResidenciaComponent } from './informacoes-de-residencia/informacoes-de-residencia.component';
 import { InformacoesPessoaisComponent } from './informacoes-pessoais/informacoes-pessoais.component';
 import { CadastroComponent } from './cadastro.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { CadastroComponent } from './cadastro.component';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   exports: [
     CadastroComponent
