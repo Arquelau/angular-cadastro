@@ -1,5 +1,6 @@
 import { Component, Input, SimpleChanges } from '@angular/core'
 import { FormControl } from '@angular/forms'
+import { Contato } from '../../../../domain/cadastro/contato'
 
 @Component({
   selector: 'app-contato',
@@ -41,7 +42,7 @@ export class ContatoComponent {
     if (changes['buttonTrigger'] && changes['buttonTrigger']?.previousValue != changes['buttonTrigger']?.currentValue && this.refresh >= 1) {
       this.buttonToggle= !this.buttonToggle
 
-      let data = {
+      let data: Contato  = {
         endereco: this.endereco.getRawValue(),
         numeroDeTelefone: this.numeroDeTelefone.getRawValue(),
         email: this.email.getRawValue(),

@@ -1,5 +1,6 @@
 import { Component, Input, SimpleChanges } from '@angular/core'
 import { FormControl } from '@angular/forms'
+import { InformacoesPessoais } from '../../../../domain/cadastro/informacoes-pessoais'
 
 @Component({
   selector: 'app-informacoes-pessoais',
@@ -50,7 +51,7 @@ export class InformacoesPessoaisComponent {
     if (changes['buttonTrigger'] && changes['buttonTrigger']?.previousValue != changes['buttonTrigger']?.currentValue && this.refresh >= 1) {
       this.buttonToggle= !this.buttonToggle
 
-      let data = {
+      let data: InformacoesPessoais = {
       nome: this.nome.getRawValue(),
       dataDeNascimento: this.dataDeNascimento.getRawValue(),
       genero: this.genero.getRawValue(),

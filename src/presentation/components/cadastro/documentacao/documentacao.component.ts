@@ -1,6 +1,7 @@
 import { Component, Input, SimpleChanges } from '@angular/core'
 import { FormControl } from '@angular/forms'
 import { CpfPipe } from './cpf.pipe'
+import { Documentacao } from '../../../../domain/cadastro/documentacao'
 
 @Component({
   selector: 'app-documentacao',
@@ -52,7 +53,7 @@ export class DocumentacaoComponent {
     if (changes['buttonTrigger'] && changes['buttonTrigger']?.previousValue != changes['buttonTrigger']?.currentValue && this.refresh >= 1) {
       this.buttonToggle= !this.buttonToggle
 
-      let data = {
+      let data: Documentacao = {
         rg: this.rg.getRawValue(),
         cpf: this.cpf.getRawValue(),
         passaporte: this.passaporte.getRawValue(),

@@ -1,5 +1,5 @@
 export type Contato = {
-  enderecoResidencial: string
-  telefone: string
+  endereco: string
+  numeroDeTelefone: string
   email: string
 }

@@ -1,4 +1,4 @@
-export type InformacoesDeResidencia = {
+export type ViaCep = {
   cep: string
   logradouro: string
   complemento: string
@@ -9,4 +9,12 @@ export type InformacoesDeResidencia = {
   gia: string
   ddd: string
   siafi: string
+}
+
+export type InformacoesDeResidencia = {
+  cep: string
+  logradouro: string
+  bairro: string
+  cidade: string
+  estado: string
 }

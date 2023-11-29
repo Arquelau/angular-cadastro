@@ -1,6 +1,6 @@
 import { Component, Input, SimpleChanges } from '@angular/core'
 import { CepService } from '../../../../app/cep.service'
-import { InformacoesDeResidencia } from '../../../../domain/cadastro/informacoes-de-residencia'
+import { InformacoesDeResidencia, ViaCep } from '../../../../domain/cadastro/informacoes-de-residencia'
 import { FormControl } from '@angular/forms'
 
 @Component({
@@ -36,7 +36,7 @@ export class InformacoesDeResidenciaComponent {
     this.cepService.search(value).subscribe((data: any) => this.fillForm(data))
   }
 
-  fillForm(data: InformacoesDeResidencia) {
+  fillForm(data: ViaCep) {
     this.cep.setValue(data.cep)
     this.logradouro.setValue(data.logradouro)
     this.cidade.setValue(data.localidade)
@@ -68,7 +68,7 @@ export class InformacoesDeResidenciaComponent {
     if (changes['buttonTrigger'] && changes['buttonTrigger']?.previousValue != changes['buttonTrigger']?.currentValue && this.refresh >= 1) {
       this.buttonToggle= !this.buttonToggle
 
-      let data = {
+      let data: InformacoesDeResidencia = {
       cep: this.cep.getRawValue(),
       logradouro: this.logradouro.getRawValue(),
       cidade: this.cidade.getRawValue(),

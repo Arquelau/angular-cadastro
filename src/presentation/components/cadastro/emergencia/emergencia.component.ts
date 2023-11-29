@@ -1,5 +1,6 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Emergencia } from '../../../../domain/cadastro/emergencia';
 
 @Component({
   selector: 'app-emergencia',
@@ -38,7 +39,7 @@ export class EmergenciaComponent {
     if (changes['buttonTrigger'] && changes['buttonTrigger']?.previousValue != changes['buttonTrigger']?.currentValue && this.refresh >= 1) {
       this.buttonToggle= !this.buttonToggle
 
-      let data = {
+      let data: Emergencia= {
       contatoDeEmergencia: this.contatoDeEmergencia.getRawValue(),
       informacoesMedicasRelevantes: this.informacoesMedicasRelevantes.getRawValue()
       }

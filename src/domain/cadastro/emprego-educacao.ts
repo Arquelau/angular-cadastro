@@ -1,5 +1,5 @@
 export type EmpregoEducacao = {
-  renda: Number
+  renda: string
   historicoDeCredito: string
   contaBancaria: string
 }
