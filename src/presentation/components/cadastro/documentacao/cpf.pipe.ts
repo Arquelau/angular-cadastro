@@ -4,6 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core'
 export class CpfPipe implements PipeTransform {
     transform(value: string|number): string {
       const cpfLenght = 11
+      value = value.toString().replace(/[^0-9]/g, '');
       if(value.toString().length != cpfLenght){
         return value.toString()
       }
@@ -15,8 +16,7 @@ export class CpfPipe implements PipeTransform {
           .replace(                           
               /(\d{3})(\d{3})(\d{3})(\d{2})/,
               '$1.$2.$3-$4'
-          );
-
+          )
       return formattedValue
     }
 }
