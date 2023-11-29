@@ -1,7 +1,7 @@
-export type InformacoesDeResidencia = {
-  nomeCompleto: String
-  dataDeNascimento: String
-  genero: String
-  estadoCivil: String
-  Nacionalidade: String
+export type InformacoesPessoais = {
+  nome: string
+  dataDeNascimento: string
+  genero: string
+  estadoCivil: string
+  nacionalidade: string
 }

@@ -1,6 +1,6 @@
 export type Documentacao = {
-  rg: String
-  cpf: String
-  passaporte: String
-  cnh: String
+  rg: string
+  cpf: string
+  passaporte: string
+  cnh: string
 }

@@ -1,4 +1,4 @@
 export type Emergencia = {
-  contatoDeEmergencia: String
-  informacoesMedicasRelevantes: String
+  contatoDeEmergencia: string
+  informacoesMedicasRelevantes: string
 }
