@@ -1,1 +1,31 @@
-<p>contato works!</p>
+<div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Contato</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Endereço Residencial</mat-label>
+          <input matInput [formControl]="endereco" placeholder="Insira seu endereço..." value="" required>
+        </mat-form-field>
+      </form>
+
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Número de Telefone</mat-label>
+          <input matInput [formControl]="numeroDeTelefone" placeholder="Insira seu número de telefone..." value="" required>
+        </mat-form-field>
+      </form>
+
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput [formControl]="email" placeholder="mail@mail.com" required>
+        </mat-form-field>
+      </form>
+      
+    </mat-card-content>
+  </mat-card>
+</div>
