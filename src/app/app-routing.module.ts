@@ -2,8 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from '../presentation/components/cadastro/cadastro.component';
 
-const routes: Routes = [
-  {path: 'cadastro', component: CadastroComponent}
+const routes: Routes = [      
+  {
+    path: '',
+    redirectTo: '/cadastro',
+    pathMatch: 'full'
+  },
+  {
+    path: 'cadastro', 
+    component: CadastroComponent
+  }
 ];
 
 @NgModule({
