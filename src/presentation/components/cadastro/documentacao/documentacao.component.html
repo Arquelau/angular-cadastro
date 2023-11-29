@@ -1,1 +1,38 @@
-<p>documentacao works!</p>
+<div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Documentação</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Número de Identidade (RG)</mat-label>
+          <input matInput type="text" name="rg" [formControl]="rg" placeholder="Insira seu RG..." value="" required>
+        </mat-form-field>
+      </form>
+
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Cadastro de Pessoas Física (CPF)</mat-label>
+          <input matInput type="text" minlength="11" maxlength="14" [formControl]="cpf" (blur)="transformCpf(cpf.value)" name="cpf" placeholder="Insira seu CPF..." value="" required>
+        </mat-form-field>
+      </form>
+
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Número do Passaporte</mat-label>
+          <input matInput type="text" name="passaporte" [formControl]="passaporte" placeholder="Insira seu passaporte..." value="">
+        </mat-form-field>
+      </form>
+
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Carteira de Motorista (CNH)</mat-label>
+          <input matInput type="text" name="cnh" [formControl]="cnh" placeholder="Insira sua CNH..." value="">
+        </mat-form-field>
+      </form>
+      
+    </mat-card-content>
+  </mat-card>
+</div>
