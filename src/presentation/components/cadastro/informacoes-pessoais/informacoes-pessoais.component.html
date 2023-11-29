@@ -5,17 +5,17 @@
     </mat-card-header>
     <br>
     <mat-card-content>
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
+      <form class="form">
+        <mat-form-field class="full-width">
           <mat-label>Nome Completo</mat-label>
-          <input matInput placeholder="Insira seu nome completo..." value="">
+          <input  [formControl]="nome" matInput placeholder="Insira seu nome completo..." value="" required>
         </mat-form-field>
       </form>
 
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
+      <form class="form">
+        <mat-form-field class="full-width">
           <mat-label>Data de Nascimento</mat-label>
-          <input matInput [matDatepicker]="picker">
+          <input  [formControl]="dataDeNascimento" matInput [matDatepicker]="picker" required>
           <mat-hint>MM/DD/YYYY</mat-hint>
           <mat-datepicker-toggle matIconSuffix [for]="picker">
             <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
@@ -24,10 +24,10 @@
         </mat-form-field>
       </form>
 
-      <form class="example-form">
+      <form class="form">
         <mat-form-field>
           <mat-label>Gênero</mat-label>
-          <mat-select>
+          <mat-select  [formControl]="genero" required>
             <mat-option value="1">Masculino</mat-option>
             <mat-option value="2">Feminino</mat-option>
             <mat-option value="3">Outro</mat-option>
@@ -35,10 +35,10 @@
         </mat-form-field>  
       </form>
 
-      <form class="example-form">
+      <form class="form">
         <mat-form-field>
           <mat-label>Estado Civil</mat-label>
-          <mat-select>
+          <mat-select [formControl]="estadoCivil" required>
             <mat-option value="1">Solteiro</mat-option>
             <mat-option value="2">Casado</mat-option>
             <mat-option value="3">Divorciado</mat-option>
@@ -47,10 +47,10 @@
         </mat-form-field>  
       </form>
 
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
+      <form class="form">
+        <mat-form-field class="full-width">
           <mat-label>Nacionalidade</mat-label>
-          <input matInput placeholder="Insira sua nacionalidade..." value="">
+          <input type="text" [formControl]="nacionalidade" matInput placeholder="Insira sua nacionalidade..." value="" required>
         </mat-form-field>
       </form>
 
